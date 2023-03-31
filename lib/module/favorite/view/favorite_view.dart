@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/favorite_controller.dart';
 
 class FavoriteView extends StatefulWidget {
   const FavoriteView({Key? key}) : super(key: key);
@@ -9,7 +8,9 @@ class FavoriteView extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
+        backgroundColor: greenEmerland,
         title: const Text("Favorite"),
         actions: const [],
       ),
@@ -17,7 +18,11 @@ class FavoriteView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: const [
+              Center(
+                child: Text('FAVORITE PAGE'),
+              )
+            ],
           ),
         ),
       ),

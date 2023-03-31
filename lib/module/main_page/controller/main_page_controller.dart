@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/order_view.dart';
+import '../view/main_page_view.dart';
 
-class OrderController extends State<OrderView> implements MvcController {
-  static late OrderController instance;
-  late OrderView view;
+class MainPageController extends State<MainPageView> implements MvcController {
+  static late MainPageController instance;
+  late MainPageView view;
 
   @override
   void initState() {
@@ -17,4 +17,10 @@ class OrderController extends State<OrderView> implements MvcController {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  int selectedIndex = 0;
+  updateIndex(int newIndex) {
+    selectedIndex = newIndex;
+    setState(() {});
+  }
 }

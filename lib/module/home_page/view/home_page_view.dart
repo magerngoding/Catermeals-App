@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../../../shared/widget/popular_food.dart';
-
 class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
 

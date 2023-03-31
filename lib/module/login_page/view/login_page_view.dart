@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/shared/widget/custome_button.dart';
-import 'package:hyper_ui/shared/widget/custome_text_form_field.dart';
 
 class LoginPageView extends StatefulWidget {
   const LoginPageView({Key? key}) : super(key: key);
@@ -52,21 +50,37 @@ class LoginPageView extends StatefulWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 70,
+                  height: 40,
                 ),
-                CustomeTextFormF(
-                  title: 'Email',
-                  obscureTxt: false,
+                Card(
+                  color: greenFadedolor,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        QTextField(
+                          label: "Email",
+                          suffixIcon: Icons.email,
+                          value: "demo@gmail.com",
+                          onChanged: (value) {},
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        QTextField(
+                          label: "Password",
+                          obscure: true,
+                          validator: Validator.required,
+                          suffixIcon: Icons.password,
+                          value: "123456",
+                          onChanged: (value) {},
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 const SizedBox(
-                  height: 10,
-                ),
-                CustomeTextFormF(
-                  title: 'Password',
-                  obscureTxt: true,
-                ),
-                const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 CustomeButton(
                   title: 'Login',
@@ -75,7 +89,7 @@ class LoginPageView extends StatefulWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePageView(),
+                        builder: (context) => const MainPageView(),
                       ),
                     );
                   },
@@ -83,62 +97,44 @@ class LoginPageView extends StatefulWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  'Forgot password?',
-                  style: greenSageColorTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: bold,
+                Center(
+                  child: Text(
+                    'Forgot password?',
+                    style: greenSageColorTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: bold,
+                    ),
                   ),
                 ),
                 const SizedBox(
-                  height: 100,
+                  height: 70,
                 ),
-                Container(
-                  width: 340,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: greenSageColor,
-                  ),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: greenSageColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const RegisterPageView(),
-                        ),
-                      );
-                    },
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '  Register Now',
-                            style: whiteTextStyle.copyWith(
-                              fontSize: 15,
-                              fontWeight: bold,
-                            ),
-                          ),
-                          Icon(
-                            Icons.navigate_next_sharp,
-                            color: whiteColor,
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                const SizedBox(
+                  height: 30,
                 ),
               ],
             ),
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 18),
+        height: 72,
+        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.all(12.0),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: greenEmerland,
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const RegisterPageView(),
+              ),
+            );
+          },
+          child: const Text("Register Here"),
         ),
       ),
     );

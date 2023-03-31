@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../../../shared/widget/custome_button.dart';
-import '../../../shared/widget/custome_text_form_field.dart';
-import '../controller/register_page_controller.dart';
 
 class RegisterPageView extends StatefulWidget {
   const RegisterPageView({Key? key}) : super(key: key);
@@ -28,30 +25,35 @@ class RegisterPageView extends StatefulWidget {
               const SizedBox(
                 height: 20,
               ),
-              CustomeTextFormF(
-                title: 'Email',
+              Card(
+                color: greenFadedolor,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      QTextField(
+                        label: "Email",
+                        suffixIcon: Icons.email,
+                        value: "demo@gmail.com",
+                        onChanged: (value) {},
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      QTextField(
+                        label: "Password",
+                        obscure: true,
+                        validator: Validator.required,
+                        suffixIcon: Icons.password,
+                        value: "123456",
+                        onChanged: (value) {},
+                      ),
+                    ],
+                  ),
+                ),
               ),
               const SizedBox(
-                height: 10,
-              ),
-              CustomeTextFormF(
-                title: 'Password',
-                obscureTxt: true,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomeTextFormF(
-                title: 'Email',
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomeTextFormF(
-                title: 'Role',
-              ),
-              const SizedBox(
-                height: 50,
+                height: 40,
               ),
               CustomeButton(
                 title: 'Register',

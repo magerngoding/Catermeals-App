@@ -3,6 +3,7 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:hyper_ui/model/dummy_data.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
 export 'package:hyper_ui/module/favorite/controller/favorite_controller.dart';
@@ -13,14 +14,14 @@ export 'package:hyper_ui/module/login_page/controller/login_page_controller.dart
 export 'package:hyper_ui/module/login_page/view/login_page_view.dart';
 export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
+export 'package:hyper_ui/module/main_page/controller/main_page_controller.dart';
+export 'package:hyper_ui/module/main_page/view/main_page_view.dart';
 export 'package:hyper_ui/module/menu_item/controller/menu_item_controller.dart';
 export 'package:hyper_ui/module/menu_item/view/menu_item_view.dart';
 export 'package:hyper_ui/module/menu_page/controller/menu_page_controller.dart';
 export 'package:hyper_ui/module/menu_page/view/menu_page_view.dart';
 export 'package:hyper_ui/module/non_vegetarian_page/controller/non_vegetarian_page_controller.dart';
 export 'package:hyper_ui/module/non_vegetarian_page/view/non_vegetarian_page_view.dart';
-export 'package:hyper_ui/module/order/controller/order_controller.dart';
-export 'package:hyper_ui/module/order/view/order_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
 export 'package:hyper_ui/module/register_page/controller/register_page_controller.dart';
@@ -49,6 +50,8 @@ export 'package:hyper_ui/shared/util/string_extension/string_extension.dart';
 export 'package:hyper_ui/shared/util/url_launcher/url_launcher.dart';
 export 'package:hyper_ui/shared/util/validator/validator.dart';
 export 'package:hyper_ui/shared/widget/card/card.dart';
+export 'package:hyper_ui/shared/widget/custome_button.dart';
+export 'package:hyper_ui/shared/widget/custome_text_form_field.dart';
 export 'package:hyper_ui/shared/widget/form/autocomplete/autocomplete.dart';
 export 'package:hyper_ui/shared/widget/form/category_picker/category_picker.dart';
 export 'package:hyper_ui/shared/widget/form/check_field/check_field.dart';
@@ -69,6 +72,7 @@ export 'package:hyper_ui/shared/widget/form/time_picker/timepicker.dart';
 export 'package:hyper_ui/shared/widget/form/__form_detail_example.dart';
 export 'package:hyper_ui/shared/widget/form/__form_example.dart';
 export 'package:hyper_ui/shared/widget/list/list_view.dart';
+export 'package:hyper_ui/shared/widget/popular_food copy.dart';
 export 'core_package.dart';
 export 'state_util.dart';
 export 'setup.dart';

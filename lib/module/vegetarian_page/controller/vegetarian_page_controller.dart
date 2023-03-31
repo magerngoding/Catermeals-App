@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/vegetarian_page_view.dart';
 
-class VegetarianPageController extends State<VegetarianPageView> implements MvcController {
+class VegetarianPageController extends State<VegetarianPageView>
+    implements MvcController {
   static late VegetarianPageController instance;
   late VegetarianPageView view;
 
