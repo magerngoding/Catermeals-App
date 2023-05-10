@@ -1,9 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/shared/widget/item_dismissible/item_dismissible.dart';
 
 class ProductListPageView extends StatefulWidget {
-  const ProductListPageView({Key? key}) : super(key: key);
+  const ProductListPageView({
+    Key? key,
+  }) : super(key: key);
 
   Widget build(context, ProductListPageController controller) {
     controller.view = this;
@@ -39,26 +44,36 @@ class ProductListPageView extends StatefulWidget {
                       Map<String, dynamic> item =
                           (data.docs[index].data() as Map<String, dynamic>);
                       item["id"] = data.docs[index].id;
-                      return Card(
-                        child: ListTile(
-                          leading: Container(
-                            height: 60.0,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  item['photo'],
+                      return ItemDismissible(
+                        onConfirm: () => controller.doDelete(item['id']),
+                        child: Card(
+                          child: ListTile(
+                            onTap: () async {
+                              await Get.to(
+                                ProductFormPageView(
+                                  item: item,
                                 ),
-                              ),
-                              borderRadius: const BorderRadius.all(
-                                Radius.circular(
-                                  16.0,
+                              );
+                            },
+                            leading: Container(
+                              height: 60.0,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    item['photo'],
+                                  ),
+                                ),
+                                borderRadius: const BorderRadius.all(
+                                  Radius.circular(
+                                    16.0,
+                                  ),
                                 ),
                               ),
                             ),
+                            title: Text(item['product_name']),
+                            subtitle: Text("${item['price']}"),
                           ),
-                          title: Text(item['product_name']),
-                          subtitle: Text("${item['price']}"),
                         ),
                       );
                     },

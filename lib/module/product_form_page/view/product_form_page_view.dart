@@ -1,8 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:hyper_ui/core.dart';
 
 class ProductFormPageView extends StatefulWidget {
-  const ProductFormPageView({Key? key}) : super(key: key);
+  final Map? item;
+  const ProductFormPageView({
+    Key? key,
+    this.item,
+  }) : super(key: key);
 
   Widget build(context, ProductFormPageController controller) {
     controller.view = this;

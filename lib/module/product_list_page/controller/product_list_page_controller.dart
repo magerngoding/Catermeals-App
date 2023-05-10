@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/service/product_service.dart/product_service.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/product_list_page_view.dart';
 
-class ProductListPageController extends State<ProductListPageView> implements MvcController {
+class ProductListPageController extends State<ProductListPageView>
+    implements MvcController {
   static late ProductListPageController instance;
   late ProductListPageView view;
 
@@ -17,4 +19,8 @@ class ProductListPageController extends State<ProductListPageView> implements Mv
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  doDelete(String id) async {
+    ProductService().delete(id);
+  }
 }
