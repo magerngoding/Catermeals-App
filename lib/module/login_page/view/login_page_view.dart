@@ -61,7 +61,7 @@ class LoginPageView extends StatefulWidget {
                         QTextField(
                           label: "Email",
                           suffixIcon: Icons.email,
-                          value: "demo@gmail.com",
+                          //         value: "demo@gmail.com",
                           onChanged: (value) {},
                         ),
                         const SizedBox(
@@ -72,7 +72,7 @@ class LoginPageView extends StatefulWidget {
                           obscure: true,
                           validator: Validator.required,
                           suffixIcon: Icons.password,
-                          value: "123456",
+                          //      value: "123456",
                           onChanged: (value) {},
                         ),
                       ],

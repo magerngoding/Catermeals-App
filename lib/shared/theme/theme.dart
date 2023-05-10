@@ -1,5 +1,4 @@
-import 'package:google_fonts/google_fonts.dart';
-import 'package:hyper_ui/shared/theme/theme_config.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 ThemeData getDefaultTheme() {
@@ -9,7 +8,7 @@ ThemeData getDefaultTheme() {
     appBarTheme: AppBarTheme(
       backgroundColor: appbarBackgroundColor,
       elevation: 0.6,
-      titleTextStyle: GoogleFonts.lato(
+      titleTextStyle: GoogleFonts.poppins(
         color: Colors.blueGrey[700],
         fontWeight: FontWeight.bold,
       ),
@@ -26,24 +25,27 @@ ThemeData getDefaultTheme() {
       labelColor: Colors.blueGrey[900]!,
     ),
     textTheme: TextTheme(
-      titleSmall: GoogleFonts.lato(
+      titleSmall: GoogleFonts.poppins(
         color: Colors.blueGrey[900],
       ),
-      titleMedium: GoogleFonts.lato(
+      titleMedium: GoogleFonts.poppins(
         color: Colors.blueGrey[900],
       ),
-      titleLarge: GoogleFonts.lato(
+      titleLarge: GoogleFonts.poppins(
         color: Colors.blueGrey[900],
       ),
-      bodyLarge: GoogleFonts.lato(
+      bodyLarge: GoogleFonts.poppins(
         color: Colors.blueGrey[900],
       ),
-      bodySmall: GoogleFonts.lato(
+      bodySmall: GoogleFonts.poppins(
         color: Colors.blueGrey[900],
       ),
-      bodyMedium: GoogleFonts.lato(
+      bodyMedium: GoogleFonts.poppins(
         color: Colors.blueGrey[900],
       ),
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: greenEmerland,
     ),
   );
 }

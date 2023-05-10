@@ -8,6 +8,8 @@
         "menu_item",
         "vegetarian_page",
         "non_vegetarian_page",
-        "main_page"
+        "main_page",
+        "product_list_page",
+        "product_form_page"
     ]
 }

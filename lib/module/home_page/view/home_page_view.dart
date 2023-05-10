@@ -108,12 +108,12 @@ class HomePageView extends StatefulWidget {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          const MenuPageView(),
+                                          const ProductListPageView(),
                                     ),
                                   );
                                 },
                                 child: Text(
-                                  'View all Menu Here',
+                                  'View all Product Here',
                                   style: greenSageColorTextStyle.copyWith(
                                     fontSize: 14,
                                     fontWeight: semiBold,

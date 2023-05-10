@@ -3,43 +3,45 @@ import 'package:hyper_ui/core.dart';
 
 ThemeData getDarkTheme() {
   return ThemeData.dark().copyWith(
-    appBarTheme: AppBarTheme(
-      elevation: 0.6,
-      titleTextStyle: GoogleFonts.lato(
-        color: Colors.white,
-        fontWeight: FontWeight.bold,
+      appBarTheme: AppBarTheme(
+        elevation: 0.6,
+        titleTextStyle: GoogleFonts.poppins(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
       ),
-      iconTheme: const IconThemeData(
-        color: Colors.white,
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.white,
       ),
-    ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      unselectedItemColor: Colors.grey,
-      selectedItemColor: Colors.white,
-    ),
-    tabBarTheme: const TabBarTheme(
-      unselectedLabelColor: Colors.grey,
-      labelColor: Colors.white,
-    ),
-    textTheme: TextTheme(
-      titleSmall: GoogleFonts.lato(
-        color: Colors.white,
+      tabBarTheme: const TabBarTheme(
+        unselectedLabelColor: Colors.grey,
+        labelColor: Colors.white,
       ),
-      titleMedium: GoogleFonts.lato(
-        color: Colors.white,
+      textTheme: TextTheme(
+        titleSmall: GoogleFonts.poppins(
+          color: Colors.white,
+        ),
+        titleMedium: GoogleFonts.poppins(
+          color: Colors.white,
+        ),
+        titleLarge: GoogleFonts.poppins(
+          color: Colors.white,
+        ),
+        bodyLarge: GoogleFonts.poppins(
+          color: Colors.white,
+        ),
+        bodySmall: GoogleFonts.poppins(
+          color: Colors.white,
+        ),
+        bodyMedium: GoogleFonts.poppins(
+          color: Colors.white,
+        ),
       ),
-      titleLarge: GoogleFonts.lato(
-        color: Colors.white,
-      ),
-      bodyLarge: GoogleFonts.lato(
-        color: Colors.white,
-      ),
-      bodySmall: GoogleFonts.lato(
-        color: Colors.white,
-      ),
-      bodyMedium: GoogleFonts.lato(
-        color: Colors.white,
-      ),
-    ),
-  );
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: greenEmerland,
+      ));
 }

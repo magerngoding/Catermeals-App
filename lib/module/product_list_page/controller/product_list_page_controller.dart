@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/menu_item_view.dart';
+import '../view/product_list_page_view.dart';
 
-class MenuItemController extends State<MenuItemView> implements MvcController {
-  static late MenuItemController instance;
-  late MenuItemView view;
+class ProductListPageController extends State<ProductListPageView> implements MvcController {
+  static late ProductListPageController instance;
+  late ProductListPageView view;
 
   @override
   void initState() {
