@@ -75,6 +75,24 @@ class LoginPageView extends StatefulWidget {
                           //      value: "123456",
                           onChanged: (value) {},
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        QDropdownField(
+                          label: "As",
+                          validator: Validator.required,
+                          items: const [
+                            {
+                              "label": "Buyer",
+                              "value": "Buyer",
+                            },
+                            {
+                              "label": "Seller",
+                              "value": "Seller",
+                            }
+                          ],
+                          onChanged: (value, label) {},
+                        ),
                       ],
                     ),
                   ),
@@ -107,7 +125,18 @@ class LoginPageView extends StatefulWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 70,
+                  height: 100,
+                ),
+                CustomeButton(
+                  title: 'Register',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPageView(),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: 30,
@@ -115,26 +144,6 @@ class LoginPageView extends StatefulWidget {
               ],
             ),
           ),
-        ),
-      ),
-      bottomNavigationBar: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 18),
-        height: 72,
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(12.0),
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: greenEmerland,
-          ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const RegisterPageView(),
-              ),
-            );
-          },
-          child: const Text("Register Here"),
         ),
       ),
     );

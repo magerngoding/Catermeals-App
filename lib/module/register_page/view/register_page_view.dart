@@ -48,6 +48,21 @@ class RegisterPageView extends StatefulWidget {
                         value: "123456",
                         onChanged: (value) {},
                       ),
+                      QDropdownField(
+                        label: "As",
+                        validator: Validator.required,
+                        items: const [
+                          {
+                            "label": "Buyer",
+                            "value": "Buyer",
+                          },
+                          {
+                            "label": "Seller",
+                            "value": "Seller",
+                          }
+                        ],
+                        onChanged: (value, label) {},
+                      ),
                     ],
                   ),
                 ),

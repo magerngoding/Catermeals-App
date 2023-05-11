@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/core.dart';
 
 class QDropdownField extends StatefulWidget {
   final String label;
@@ -107,7 +108,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
                     child: Icon(
                       Icons.arrow_drop_down_outlined,
                       size: 24.0,
-                      color: Theme.of(context).textTheme.bodyLarge!.color,
+                      color: greenEmerland,
                     ),
                   ),
                   iconSize: 16,
@@ -120,7 +121,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
                   ),
                   underline: Container(
                     height: 0,
-                    color: Colors.grey[300],
+                    color: greenEmerland,
                   ),
                   onChanged: (Map<String, dynamic>? newValue) {
                     if (widget.emptyMode && newValue?["value"] == "-") {

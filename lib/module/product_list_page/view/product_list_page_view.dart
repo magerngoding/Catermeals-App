@@ -24,6 +24,48 @@ class ProductListPageView extends StatefulWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            Container(
+              padding: const EdgeInsets.symmetric(
+                vertical: 6.0,
+                horizontal: 12.0,
+              ),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10.0),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        initialValue: null,
+                        decoration: InputDecoration.collapsed(
+                          filled: true,
+                          fillColor: Colors.transparent,
+                          hintText: "Find your food here...",
+                          hintStyle: TextStyle(
+                            color: greenEmerland,
+                          ),
+                          hoverColor: Colors.transparent,
+                        ),
+                        onFieldSubmitted: (value) =>
+                            controller.updateSearch(value),
+                      ),
+                    ),
+                    Icon(
+                      Icons.search,
+                      color: greenEmerland,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
@@ -44,6 +86,15 @@ class ProductListPageView extends StatefulWidget {
                       Map<String, dynamic> item =
                           (data.docs[index].data() as Map<String, dynamic>);
                       item["id"] = data.docs[index].id;
+
+                      if (controller.search.isNotEmpty) {
+                        var search = controller.search.toLowerCase();
+                        var productName =
+                            item['product_name'].toString().toLowerCase();
+                        if (!productName.contains(search)) {
+                          return Container();
+                        }
+                      }
                       return ItemDismissible(
                         onConfirm: () => controller.doDelete(item['id']),
                         child: Card(

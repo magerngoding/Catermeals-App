@@ -23,4 +23,10 @@ class ProductListPageController extends State<ProductListPageView>
   doDelete(String id) async {
     ProductService().delete(id);
   }
+
+  String search = "";
+  updateSearch(String query) {
+    search = query;
+    setState(() {});
+  }
 }
