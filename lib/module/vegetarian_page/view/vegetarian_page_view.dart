@@ -10,7 +10,7 @@ class VegetarianPageView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("VegetarianPage"),
+        title: const Text("Vegetarian"),
         actions: const [],
       ),
       body: SingleChildScrollView(

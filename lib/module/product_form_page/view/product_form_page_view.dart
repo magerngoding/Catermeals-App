@@ -17,7 +17,7 @@ class ProductFormPageView extends StatefulWidget {
       backgroundColor: backgroundColor,
       appBar: AppBar(
         backgroundColor: backgroundColor,
-        title: const Text("ProductFormPage"),
+        title: const Text("Product Form"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -38,13 +38,19 @@ class ProductFormPageView extends StatefulWidget {
                           controller.photo = value;
                         },
                       ),
+                      const SizedBox(
+                        height: 15,
+                      ),
                       QTextField(
-                        label: "Name",
+                        label: "Name  (Max 20 character!)",
                         validator: Validator.required,
                         value: controller.productName,
                         onChanged: (value) {
                           controller.productName = value;
                         },
+                      ),
+                      const SizedBox(
+                        height: 15,
                       ),
                       QNumberField(
                         label: "Price",
@@ -53,6 +59,9 @@ class ProductFormPageView extends StatefulWidget {
                         onChanged: (value) {
                           controller.price = double.tryParse(value) ?? 0;
                         },
+                      ),
+                      const SizedBox(
+                        height: 15,
                       ),
                       QDropdownField(
                         label: "Category",
@@ -72,8 +81,11 @@ class ProductFormPageView extends StatefulWidget {
                           controller.category = value;
                         },
                       ),
+                      const SizedBox(
+                        height: 15,
+                      ),
                       QMemoField(
-                        label: "Description",
+                        label: "Description (Include contact person)",
                         validator: Validator.required,
                         value: controller.description,
                         onChanged: (value) {

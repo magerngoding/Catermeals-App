@@ -17,7 +17,7 @@ class ProductListPageView extends StatefulWidget {
       backgroundColor: backgroundColor,
       appBar: AppBar(
         backgroundColor: backgroundColor,
-        title: const Text("ProductListPage"),
+        title: const Text("Product List"),
         actions: const [],
       ),
       body: Container(
@@ -97,33 +97,95 @@ class ProductListPageView extends StatefulWidget {
                       }
                       return ItemDismissible(
                         onConfirm: () => controller.doDelete(item['id']),
-                        child: Card(
-                          child: ListTile(
-                            onTap: () async {
-                              await Get.to(
-                                ProductFormPageView(
-                                  item: item,
-                                ),
-                              );
-                            },
-                            leading: Container(
-                              height: 60.0,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    item['photo'],
-                                  ),
-                                ),
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(
-                                    16.0,
-                                  ),
-                                ),
+                        child: GestureDetector(
+                          onTap: () async {
+                            await Get.to(
+                              ProductFormPageView(
+                                item: item,
                               ),
+                            );
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.only(bottom: 15),
+                            padding: const EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: greenFadedolor,
                             ),
-                            title: Text(item['product_name']),
-                            subtitle: Text("${item['price']}"),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      item['product_name'],
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: blackTextStyle.copyWith(
+                                        fontSize: 17,
+                                        fontWeight: semiBold,
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 80.0,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: NetworkImage(
+                                            item['photo'],
+                                          ),
+                                        ),
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(
+                                            20.0,
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  item['description'],
+                                  style: blackTextStyle,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.fastfood,
+                                      color: Colors.red,
+                                      size: 20,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      item['category'],
+                                      style: greenEmerlandTextStyle,
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Text(
+                                  "${item['price']}",
+                                  style: blackTextStyle.copyWith(
+                                    fontWeight: bold,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       );
