@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
@@ -10,17 +11,34 @@ class ProfileView extends StatefulWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        backgroundColor: greenEmerland,
+        backgroundColor: backgroundColor,
         title: const Text("Profile"),
-        actions: const [],
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () => controller.doLogout(),
+            icon: const Icon(
+              Icons.logout,
+              size: 24.0,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [
+            children: [
+              const SizedBox(
+                height: 200.0,
+              ),
               Center(
-                child: Text('PROFILE PAGE'),
+                child: Text(
+                  '${FirebaseAuth.instance.currentUser!.email}',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ],
           ),

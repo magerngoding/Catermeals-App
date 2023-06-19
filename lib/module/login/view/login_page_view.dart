@@ -61,8 +61,9 @@ class LoginPageView extends StatefulWidget {
                         QTextField(
                           label: "Email",
                           suffixIcon: Icons.email,
-                          //         value: "demo@gmail.com",
-                          onChanged: (value) {},
+                          onChanged: (value) {
+                            controller.email = value;
+                          },
                         ),
                         const SizedBox(
                           height: 10,
@@ -72,14 +73,15 @@ class LoginPageView extends StatefulWidget {
                           obscure: true,
                           validator: Validator.required,
                           suffixIcon: Icons.password,
-                          //      value: "123456",
-                          onChanged: (value) {},
+                          onChanged: (value) {
+                            controller.password = value;
+                          },
                         ),
                         const SizedBox(
                           height: 10,
                         ),
                         QDropdownField(
-                          label: "As",
+                          label: "Role",
                           validator: Validator.required,
                           items: const [
                             {
@@ -91,7 +93,9 @@ class LoginPageView extends StatefulWidget {
                               "value": "Seller",
                             }
                           ],
-                          onChanged: (value, label) {},
+                          onChanged: (value, label) {
+                            controller.role = value;
+                          },
                         ),
                       ],
                     ),
@@ -102,16 +106,17 @@ class LoginPageView extends StatefulWidget {
                 ),
                 CustomeButton(
                   title: 'Login',
-                  width: 350,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MainPageView(),
-                      ),
-                    );
-                  },
+                  width: MediaQuery.of(context).size.width,
+                  onPressed: () => controller.doEmailLogin(),
                 ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                // CustomeButton(
+                //   title: 'Google Login',
+                //   width: MediaQuery.of(context).size.width,
+                //   onPressed: () => controller.doGoogleLogin(),
+                // ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -133,7 +138,7 @@ class LoginPageView extends StatefulWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const RegisterPageView(),
+                        builder: (context) => const RegisterPage(),
                       ),
                     );
                   },

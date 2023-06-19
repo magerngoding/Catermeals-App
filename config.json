@@ -1,5 +1,4 @@
 {
-    "openai_key": "",
     "modules": [
         "home_page",
         "login_page",
@@ -11,5 +10,8 @@
         "main_page",
         "product_list_page",
         "product_form_page"
-    ]
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "unfreezed": true
 }

@@ -43,7 +43,7 @@ Future showInfoDialog(String message) async {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blueGrey,
+                            backgroundColor: greenEmerland,
                           ),
                           onPressed: () => Get.back(),
                           child: const Text("Ok"),
