@@ -15,7 +15,6 @@ class MainPageView extends StatefulWidget {
           index: controller.selectedIndex,
           children: const [
             HomePageView(),
-            FavoriteView(),
             ProfileView(),
           ],
         ),

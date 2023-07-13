@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hyper_ui/core.dart';
+
+import '../../../state_util.dart';
 
 class LoginPageController extends State<LoginPageView>
     implements MvcController {
@@ -33,38 +34,6 @@ class LoginPageController extends State<LoginPageView>
       Get.offAll(const MainNavigationView());
     } on Exception {
       showInfoDialog('Wrong email or password!');
-    }
-  }
-
-  doGoogleLogin() async {
-    try {
-      GoogleSignIn googleSignIn = GoogleSignIn(
-        scopes: [
-          'email',
-        ],
-      );
-
-      try {
-        await googleSignIn.disconnect();
-      } catch (_) {}
-
-      try {
-        GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
-        GoogleSignInAuthentication googleSignInAuthentication =
-            await googleSignInAccount!.authentication;
-        final AuthCredential credential = GoogleAuthProvider.credential(
-          accessToken: googleSignInAuthentication.accessToken,
-          idToken: googleSignInAuthentication.idToken,
-        );
-        var userCredential =
-            await FirebaseAuth.instance.signInWithCredential(credential);
-        debugPrint("userCredential: $userCredential");
-        //TODO: on login success
-        //------------------
-        Get.offAll(const MainNavigationView());
-      } catch (_) {}
-    } on Exception catch (err) {
-      print(err);
     }
   }
 }

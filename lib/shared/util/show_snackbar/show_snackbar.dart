@@ -1,6 +1,8 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../../state_util.dart';
+
 snackbarPrimary({required String message, int duration = 4}) {
   var snackBar = SnackBar(
     duration: Duration(seconds: duration),

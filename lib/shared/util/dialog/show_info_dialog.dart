@@ -1,6 +1,7 @@
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/state_util.dart';
 
 Future showInfoDialog(String message) async {
   await showDialog<void>(

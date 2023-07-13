@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+import '../../../state_util.dart';
+
 class RegisterPageController extends State<RegisterPage>
     implements MvcController {
   static late RegisterPageController instance;

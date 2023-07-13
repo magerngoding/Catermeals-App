@@ -112,14 +112,6 @@ class LoginPageView extends StatefulWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                // CustomeButton(
-                //   title: 'Google Login',
-                //   width: MediaQuery.of(context).size.width,
-                //   onPressed: () => controller.doGoogleLogin(),
-                // ),
-                const SizedBox(
-                  height: 20,
-                ),
                 Center(
                   child: Text(
                     'Forgot password?',

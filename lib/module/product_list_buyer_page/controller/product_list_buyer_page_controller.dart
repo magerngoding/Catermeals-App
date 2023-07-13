@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/non_vegetarian_page_view.dart';
+import '../view/product_list_buyer_page_view.dart';
 
-class NonVegetarianPageController extends State<NonVegetarianPageView>
-    implements MvcController {
-  static late NonVegetarianPageController instance;
-  late NonVegetarianPageView view;
+class ProductListBuyerPageController extends State<ProductListBuyerPageView> {
+  static late ProductListBuyerPageController instance;
+  late ProductListBuyerPageView view;
 
   @override
   void initState() {

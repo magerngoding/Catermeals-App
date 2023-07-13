@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+import '../../../state_util.dart';
+
 class HomePageController extends State<HomePageView> implements MvcController {
   @override
   static late HomePageController instance;

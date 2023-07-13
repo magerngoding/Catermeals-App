@@ -13,6 +13,8 @@ class ProfileView extends StatefulWidget {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         title: const Text("Profile"),
+        elevation: 0,
+        leading: Container(),
         centerTitle: true,
         actions: [
           IconButton(

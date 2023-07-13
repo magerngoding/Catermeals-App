@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/shared/widget/item_dismissible/item_dismissible.dart';
+import 'package:hyper_ui/state_util.dart';
 
 class ProductListPageView extends StatefulWidget {
   const ProductListPageView({
@@ -58,7 +58,7 @@ class ProductListPageView extends StatefulWidget {
                     Icon(
                       Icons.search,
                       color: greenEmerland,
-                    )
+                    ),
                   ],
                 ),
               ),

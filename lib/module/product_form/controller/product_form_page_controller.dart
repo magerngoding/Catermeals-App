@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/service/product_service.dart/product_service.dart';
+
+import '../../../state_util.dart';
 
 class ProductFormPageController extends State<ProductFormPageView>
     implements MvcController {

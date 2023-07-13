@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-class HomePageView extends StatefulWidget {
-  const HomePageView({Key? key}) : super(key: key);
+class HomePageBuyerView extends StatefulWidget {
+  const HomePageBuyerView({Key? key}) : super(key: key);
 
-  Widget build(context, HomePageController controller) {
+  Widget build(context, HomePageBuyerController controller) {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SingleChildScrollView(
@@ -69,7 +69,7 @@ class HomePageView extends StatefulWidget {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          const ProductListPageView(),
+                                          const ProductListBuyerPageView(),
                                     ),
                                   );
                                 },
@@ -193,5 +193,5 @@ class HomePageView extends StatefulWidget {
   }
 
   @override
-  State<HomePageView> createState() => HomePageController();
+  State<HomePageBuyerView> createState() => HomePageBuyerController();
 }

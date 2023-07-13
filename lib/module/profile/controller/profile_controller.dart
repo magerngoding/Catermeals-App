@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/module/login/view/login_page_view.dart';
+import 'package:hyper_ui/rolebased/login.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/profile_view.dart';
 
@@ -23,6 +23,6 @@ class ProfileController extends State<ProfileView> implements MvcController {
   doLogout() async {
     await FirebaseAuth.instance.signOut();
 
-    Get.offAll(const LoginPageView());
+    Get.offAll(const LoginPage());
   }
 }

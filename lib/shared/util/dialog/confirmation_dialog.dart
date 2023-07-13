@@ -1,6 +1,8 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../../state_util.dart';
+
 Future<bool> showConfirmationDialog() async {
   bool confirm = false;
   await showDialog<void>(
@@ -9,9 +11,9 @@ Future<bool> showConfirmationDialog() async {
     builder: (BuildContext context) {
       return AlertDialog(
         title: const Text('Confirm'),
-        content: SingleChildScrollView(
+        content: const SingleChildScrollView(
           child: ListBody(
-            children: const <Widget>[
+            children: <Widget>[
               Text('Are you sure you want to delete this item?'),
             ],
           ),

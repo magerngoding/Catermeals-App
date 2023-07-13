@@ -1,7 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
+import 'package:hyper_ui/rolebased/register.dart';
 
 void main() async {
   await initialize();
@@ -23,13 +24,14 @@ class MainApp extends StatelessWidget {
       valueListenable: Get.mainTheme,
       builder: (context, value, child) {
         return MaterialApp(
-          title: 'Capek Ngoding',
+          title: '',
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: FirebaseAuth.instance.currentUser != null
-              ? const MainNavigationView()
-              : const LoginPageView(),
+          home: const Register(),
+          // home: FirebaseAuth.instance.currentUser != null
+          //     ? const MainNavigationView()
+          //     : const LoginPageView(),
           builder: (context, child) => debugView(
             context: context,
             child: child,
