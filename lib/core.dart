@@ -1,21 +1,13 @@
-/*
-We believe, the class name must be unique. 
-If there is a conflicting class name in this file,
-it means you have to rename it to something more unique.
-*/
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
 export 'package:hyper_ui/debug.dart';
 export 'package:hyper_ui/firebase_options.dart';
-export 'package:hyper_ui/model/dummy_data.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
 export 'package:hyper_ui/module/home/controller/home_page_controller.dart';
 export 'package:hyper_ui/module/home/view/home_page_view.dart';
 export 'package:hyper_ui/module/home_page_buyer/controller/home_page_buyer_controller.dart';
 export 'package:hyper_ui/module/home_page_buyer/view/home_page_buyer_view.dart';
-export 'package:hyper_ui/module/login/controller/login_page_controller.dart';
-export 'package:hyper_ui/module/login/view/login_page_view.dart';
 export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
 export 'package:hyper_ui/module/main_page/controller/main_page_controller.dart';
@@ -24,18 +16,15 @@ export 'package:hyper_ui/module/non_vegetarian/controller/non_vegetarian_page_co
 export 'package:hyper_ui/module/non_vegetarian/view/non_vegetarian_page_view.dart';
 export 'package:hyper_ui/module/product_form/controller/product_form_page_controller.dart';
 export 'package:hyper_ui/module/product_form/view/product_form_page_view.dart';
-export 'package:hyper_ui/module/product_list/controller/product_list_page_controller.dart';
-export 'package:hyper_ui/module/product_list/view/product_list_page_view.dart';
-export 'package:hyper_ui/module/product_list_buyer_page/controller/product_list_buyer_page_controller.dart';
-export 'package:hyper_ui/module/product_list_buyer_page/view/product_list_buyer_page_view.dart';
+export 'package:hyper_ui/module/product_list_seller/controller/product_list_page_controller.dart';
+export 'package:hyper_ui/module/product_list_seller/view/product_list_seller.dart';
+export 'package:hyper_ui/module/product_list_buyer/controller/product_list_buyer_page_controller.dart';
+export 'package:hyper_ui/module/product_list_buyer/view/product_list_buyer_page_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
-export 'package:hyper_ui/module/register/controller/register_page_controller.dart';
-export 'package:hyper_ui/module/register/view/register_page_view.dart';
 export 'package:hyper_ui/module/vegetarian/controller/vegetarian_page_controller.dart';
 export 'package:hyper_ui/module/vegetarian/view/vegetarian_page_view.dart';
 export 'package:hyper_ui/rolebased/buyer.dart';
-export 'package:hyper_ui/rolebased/home.dart';
 export 'package:hyper_ui/rolebased/login.dart';
 export 'package:hyper_ui/rolebased/register.dart';
 export 'package:hyper_ui/rolebased/seller.dart';

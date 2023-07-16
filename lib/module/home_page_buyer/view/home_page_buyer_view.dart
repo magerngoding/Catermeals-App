@@ -36,7 +36,7 @@ class HomePageBuyerView extends StatefulWidget {
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Penuhi kebutuhan makan harian kamu dengan\nXYZ Catering',
+                          'Penuhi kebutuhan makan harian kamu dengan\nCATER MEALS!',
                           style: greenSageColorTextStyle.copyWith(
                               fontSize: 14, fontWeight: regular),
                         ),

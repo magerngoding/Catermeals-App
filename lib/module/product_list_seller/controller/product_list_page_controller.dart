@@ -1,12 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/service/product_service.dart/product_service.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/product_list_page_view.dart';
+import '../../../rolebased/login.dart';
+import '../view/product_list_seller.dart';
 
-class ProductListPageController extends State<ProductListPageView>
+class ProductListSellerPageController extends State<ProductListSeller>
     implements MvcController {
-  static late ProductListPageController instance;
-  late ProductListPageView view;
+  static late ProductListSellerPageController instance;
+  late ProductListSeller view;
 
   @override
   void initState() {
@@ -28,5 +30,11 @@ class ProductListPageController extends State<ProductListPageView>
   updateSearch(String query) {
     search = query;
     setState(() {});
+  }
+
+  doLogout() async {
+    await FirebaseAuth.instance.signOut();
+
+    Get.offAll(const LoginPage());
   }
 }

@@ -3,22 +3,34 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/state_util.dart';
 
-class ProductListPageView extends StatefulWidget {
-  const ProductListPageView({
+class ProductListSeller extends StatefulWidget {
+  const ProductListSeller({
     Key? key,
   }) : super(key: key);
 
-  Widget build(context, ProductListPageController controller) {
+  Widget build(context, ProductListSellerPageController controller) {
     controller.view = this;
 
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
         backgroundColor: backgroundColor,
-        title: const Text("Product List"),
-        actions: const [],
+        title: const Text(
+          "Product List Seller",
+          style: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () => controller.doLogout(),
+            icon: const Icon(
+              Icons.logout,
+              size: 24.0,
+            ),
+          ),
+        ],
       ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
@@ -48,6 +60,7 @@ class ProductListPageView extends StatefulWidget {
                           hintText: "Find your food here...",
                           hintStyle: TextStyle(
                             color: greenEmerland,
+                            fontWeight: FontWeight.w600,
                           ),
                           hoverColor: Colors.transparent,
                         ),
@@ -124,7 +137,7 @@ class ProductListPageView extends StatefulWidget {
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: blackTextStyle.copyWith(
-                                        fontSize: 17,
+                                        fontSize: 18,
                                         fontWeight: semiBold,
                                       ),
                                     ),
@@ -207,5 +220,5 @@ class ProductListPageView extends StatefulWidget {
   }
 
   @override
-  State<ProductListPageView> createState() => ProductListPageController();
+  State<ProductListSeller> createState() => ProductListSellerPageController();
 }

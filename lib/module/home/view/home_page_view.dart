@@ -69,7 +69,7 @@ class HomePageView extends StatefulWidget {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          const ProductListPageView(),
+                                          const ProductListSeller(),
                                     ),
                                   );
                                 },

@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/rolebased/register.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -27,8 +26,7 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             Container(
               color: backgroundColor,
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.70,
+              height: MediaQuery.of(context).size.height,
               child: Center(
                 child: Container(
                   margin: const EdgeInsets.all(12),
@@ -62,7 +60,9 @@ class _LoginPageState extends State<LoginPage> {
                             contentPadding: const EdgeInsets.only(
                                 left: 14.0, bottom: 8.0, top: 8.0),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.white),
+                              borderSide: const BorderSide(
+                                color: Colors.white,
+                              ),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             enabledBorder: UnderlineInputBorder(
@@ -200,6 +200,25 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              width: 130,
+                              child: Image.asset(
+                                'assets/image/logo.png',
+                              ),
+                            ),
+                            const Text(
+                              "CaterMeals",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Color(0xff206A5D),
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -224,14 +243,14 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const MainNavigationView(),
+              builder: (context) => const ProductListSeller(),
             ),
           );
         } else {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomePageView(),
+              builder: (context) => const MainNavigationView(),
             ),
           );
         }

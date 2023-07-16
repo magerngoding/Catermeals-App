@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
 import '../view/product_list_buyer_page_view.dart';
 
 class ProductListBuyerPageController extends State<ProductListBuyerPageView> {
@@ -17,4 +16,10 @@ class ProductListBuyerPageController extends State<ProductListBuyerPageView> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  String search = "";
+  updateSearch(String query) {
+    search = query;
+    setState(() {});
+  }
 }
