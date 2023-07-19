@@ -1,11 +1,16 @@
+/*
+We believe, the class name must be unique. 
+If there is a conflicting class name in this file,
+it means you have to rename it to something more unique.
+*/
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
 export 'package:hyper_ui/debug.dart';
 export 'package:hyper_ui/firebase_options.dart';
+export 'package:hyper_ui/module/home_page_seller/controller/home_page_seller.dart';
+export 'package:hyper_ui/module/home_page_seller/view/home_page_seller.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
-export 'package:hyper_ui/module/home/controller/home_page_controller.dart';
-export 'package:hyper_ui/module/home/view/home_page_view.dart';
 export 'package:hyper_ui/module/home_page_buyer/controller/home_page_buyer_controller.dart';
 export 'package:hyper_ui/module/home_page_buyer/view/home_page_buyer_view.dart';
 export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
@@ -14,12 +19,18 @@ export 'package:hyper_ui/module/main_page/controller/main_page_controller.dart';
 export 'package:hyper_ui/module/main_page/view/main_page_view.dart';
 export 'package:hyper_ui/module/non_vegetarian/controller/non_vegetarian_page_controller.dart';
 export 'package:hyper_ui/module/non_vegetarian/view/non_vegetarian_page_view.dart';
-export 'package:hyper_ui/module/product_form/controller/product_form_page_controller.dart';
-export 'package:hyper_ui/module/product_form/view/product_form_page_view.dart';
-export 'package:hyper_ui/module/product_list_seller/controller/product_list_page_controller.dart';
-export 'package:hyper_ui/module/product_list_seller/view/product_list_seller.dart';
-export 'package:hyper_ui/module/product_list_buyer/controller/product_list_buyer_page_controller.dart';
-export 'package:hyper_ui/module/product_list_buyer/view/product_list_buyer_page_view.dart';
+export 'package:hyper_ui/module/product_form_seller/controller/product_form_page_controller.dart';
+export 'package:hyper_ui/module/product_form_seller/view/product_form_page_view.dart';
+export 'package:hyper_ui/module/product_form_non_vegetarian_seller/controller/product_form_non_vegetarian_controller.dart';
+export 'package:hyper_ui/module/product_form_non_vegetarian_seller/view/product_form_non_vegetarian_view.dart';
+export 'package:hyper_ui/module/product_form_vegetarian_seller/controller/product_form_vegetarian_controller.dart';
+export 'package:hyper_ui/module/product_form_vegetarian_seller/view/product_form_vegetarian_view.dart';
+export 'package:hyper_ui/module/product_list_non_vegetarian_buyer/controller/product_list_non_vegetarian_buyer_controller.dart';
+export 'package:hyper_ui/module/product_list_non_vegetarian_buyer/view/product_list_non_vegetarian_buyer_view.dart';
+export 'package:hyper_ui/module/all_product_list_seller/controller/product_list_page_controller.dart';
+export 'package:hyper_ui/module/all_product_list_seller/view/product_list_seller.dart';
+export 'package:hyper_ui/module/product_list_vegetarian_buyer/controller/product_list_vegetarian_buyer_controller.dart';
+export 'package:hyper_ui/module/product_list_vegetarian_buyer/view/product_list_vegetarian_buyer_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
 export 'package:hyper_ui/module/vegetarian/controller/vegetarian_page_controller.dart';
@@ -29,7 +40,9 @@ export 'package:hyper_ui/rolebased/login.dart';
 export 'package:hyper_ui/rolebased/register.dart';
 export 'package:hyper_ui/rolebased/seller.dart';
 export 'package:hyper_ui/service/main_storage_service/main_storage.dart';
+export 'package:hyper_ui/service/product_non_vegetarian_service/product_non_vegetarian_service.dart';
 export 'package:hyper_ui/service/product_service.dart/product_service.dart';
+export 'package:hyper_ui/service/product_vegetarian_vegetarianproduct_vegetarian_service/product_vegetarian_service.dart';
 export 'package:hyper_ui/setup.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
 export 'package:hyper_ui/shared/theme/theme_catering.dart';

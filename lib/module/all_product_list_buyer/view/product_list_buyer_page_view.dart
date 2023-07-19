@@ -2,13 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+import '../controller/product_list_buyer_page_controller.dart';
+
 class ProductListBuyerPageView extends StatefulWidget {
   const ProductListBuyerPageView({Key? key}) : super(key: key);
 
   Widget build(context, ProductListBuyerPageController controller) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Product List Buyer"),
+        title: const Text("All Products"),
         actions: const [],
       ),
       body: Container(
@@ -78,6 +80,16 @@ class ProductListBuyerPageView extends StatefulWidget {
                       Map<String, dynamic> item =
                           (data.docs[index].data() as Map<String, dynamic>);
                       item["id"] = data.docs[index].id;
+
+                      if (controller.search.isNotEmpty) {
+                        var search = controller.search.toLowerCase();
+                        var productName =
+                            item['product_name'].toString().toLowerCase();
+                        if (!productName.contains(search)) {
+                          return Container();
+                        }
+                      }
+
                       return Container(
                         margin: const EdgeInsets.only(bottom: 15),
                         padding: const EdgeInsets.all(15),

@@ -18,4 +18,10 @@ class VegetarianPageController extends State<VegetarianPageView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  String search = "";
+  updateSearch(String query) {
+    search = query;
+    setState(() {});
+  }
 }

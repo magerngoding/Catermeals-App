@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/module/product_list_seller/view/choose_product_list.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -244,7 +243,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const ChooseProductList(),
+              builder: (context) => const HomePageSellerView(),
             ),
           );
         } else {

@@ -14,7 +14,7 @@ class MainPageView extends StatefulWidget {
         body: IndexedStack(
           index: controller.selectedIndex,
           children: const [
-            HomePageView(),
+            HomePageBuyerView(),
             ProfileView(),
           ],
         ),

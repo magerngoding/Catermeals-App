@@ -1,6 +1,7 @@
 {
     "modules": [
-        "home_page_buyer"
+        "product_list_vegetarian_buyer",
+        "product_list_non_vegetarian_buyer"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
