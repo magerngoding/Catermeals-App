@@ -21,8 +21,10 @@ export 'package:hyper_ui/module/main_navigation/controller/main_navigation_contr
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
 export 'package:hyper_ui/module/main_page/controller/main_page_controller.dart';
 export 'package:hyper_ui/module/main_page/view/main_page_view.dart';
-export 'package:hyper_ui/module/non_vegetarian/controller/non_vegetarian_page_controller.dart';
-export 'package:hyper_ui/module/non_vegetarian/view/non_vegetarian_page_view.dart';
+export 'package:hyper_ui/module/non_vegetarian_seller/controller/non_vegetarian_page_controller.dart';
+export 'package:hyper_ui/module/non_vegetarian_seller/view/non_vegetarian_page_view.dart';
+export 'package:hyper_ui/module/product_detail_vegetarian_buyer2/controller/product_detail_vegetarian_buyer2_controller.dart';
+export 'package:hyper_ui/module/product_detail_vegetarian_buyer2/view/product_detail_vegetarian_buyer2_view.dart';
 export 'package:hyper_ui/module/product_form_non_vegetarian_seller2/controller/product_form_non_vegetarian_seller2_controller.dart';
 export 'package:hyper_ui/module/product_form_non_vegetarian_seller2/view/product_form_non_vegetarian_seller2_view.dart';
 export 'package:hyper_ui/module/product_form_seller/controller/product_form_page_controller.dart';
@@ -35,8 +37,8 @@ export 'package:hyper_ui/module/product_list_vegetarian_buyer2/controller/produc
 export 'package:hyper_ui/module/product_list_vegetarian_buyer2/view/product_list_vegetarian_buyer2_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
-export 'package:hyper_ui/module/vegetarian/controller/vegetarian_page_controller.dart';
-export 'package:hyper_ui/module/vegetarian/view/vegetarian_page_view.dart';
+export 'package:hyper_ui/module/vegetarian_seller/controller/vegetarian_page_controller.dart';
+export 'package:hyper_ui/module/vegetarian_seller/view/vegetarian_page_view.dart';
 export 'package:hyper_ui/rolebased/buyer.dart';
 export 'package:hyper_ui/rolebased/login.dart';
 export 'package:hyper_ui/rolebased/register.dart';

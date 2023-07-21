@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
-import '../view/vegetarian_page_view.dart';
+import 'package:hyper_ui/core.dart';
 
 class VegetarianPageController extends State<VegetarianPageView>
     implements MvcController {
@@ -23,5 +22,9 @@ class VegetarianPageController extends State<VegetarianPageView>
   updateSearch(String query) {
     search = query;
     setState(() {});
+  }
+
+  doDelete(String id) async {
+    await ProductVegetarianService().delete(id);
   }
 }

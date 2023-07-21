@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
-import '../../../service/product_non_vegetarian_service/product_non_vegetarian_service.dart';
-import '../../../shared/util/show_loading/show_loading.dart';
-import '../view/product_form_vegetarian_seller2_view.dart';
+import 'package:hyper_ui/core.dart';
 
 class ProductFormVegetarianSeller2Controller
     extends State<ProductFormVegetarianSeller2View> {
@@ -40,13 +37,24 @@ class ProductFormVegetarianSeller2Controller
 
   doSave() async {
     showLoading();
-    await ProductNonVegetarianService().create(
-      photo: photo!,
-      productName: productName!,
-      price: price!,
-      category: category!,
-      description: description!,
-    );
+    if (isEditMode) {
+      await ProductVegetarianService().update(
+        id: id!,
+        photo: photo!,
+        productName: productName!,
+        price: price!,
+        category: category!,
+        description: description!,
+      );
+    } else {
+      await ProductVegetarianService().create(
+        photo: photo!,
+        productName: productName!,
+        price: price!,
+        category: category!,
+        description: description!,
+      );
+    }
     hideLoading();
     Get.back();
   }

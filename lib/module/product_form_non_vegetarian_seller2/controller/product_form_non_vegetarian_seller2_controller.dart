@@ -12,6 +12,14 @@ class ProductFormNonVegetarianSeller2Controller
   @override
   void initState() {
     instance = this;
+    if (isEditMode) {
+      id = widget.item!['id'];
+      photo = widget.item!['photo'];
+      productName = widget.item!['product_name'];
+      price = widget.item!['price'];
+      category = widget.item!['category'];
+      description = widget.item!['description'];
+    }
     super.initState();
   }
 
@@ -20,6 +28,8 @@ class ProductFormNonVegetarianSeller2Controller
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  bool get isEditMode => widget.item != null;
 
   String? id;
   String? photo;
@@ -30,13 +40,24 @@ class ProductFormNonVegetarianSeller2Controller
 
   doSave() async {
     showLoading();
-    await ProductNonVegetarianService().create(
-      photo: photo!,
-      productName: productName!,
-      price: price!,
-      category: category!,
-      description: description!,
-    );
+    if (isEditMode) {
+      await ProductNonVegetarianService().update(
+        id: id!,
+        photo: photo!,
+        productName: productName!,
+        price: price!,
+        category: category!,
+        description: description!,
+      );
+    } else {
+      await ProductNonVegetarianService().create(
+        photo: photo!,
+        productName: productName!,
+        price: price!,
+        category: category!,
+        description: description!,
+      );
+    }
     hideLoading();
     Get.back();
   }

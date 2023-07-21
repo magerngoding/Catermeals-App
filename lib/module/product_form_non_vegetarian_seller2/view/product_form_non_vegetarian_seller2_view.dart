@@ -1,15 +1,21 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:hyper_ui/core.dart';
 
 class ProductFormNonVegetarianSeller2View extends StatefulWidget {
-  const ProductFormNonVegetarianSeller2View({Key? key}) : super(key: key);
+  final Map? item;
+  const ProductFormNonVegetarianSeller2View({
+    Key? key,
+    this.item,
+  }) : super(key: key);
 
   Widget build(context, ProductFormNonVegetarianSeller2Controller controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Product Form Vegetarian"),
+        title: const Text("Product Non Form Vegetarian"),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -24,7 +30,7 @@ class ProductFormNonVegetarianSeller2View extends StatefulWidget {
                       QImagePicker(
                         label: "Photo",
                         validator: Validator.required,
-                        //    value: controller.photo,
+                        value: controller.photo,
                         onChanged: (value) {
                           controller.photo = value;
                         },
@@ -35,7 +41,7 @@ class ProductFormNonVegetarianSeller2View extends StatefulWidget {
                       QTextField(
                         label: "Name  (Max 20 character!)",
                         validator: Validator.required,
-                        //   value: controller.productName,
+                        value: controller.productName,
                         onChanged: (value) {
                           controller.productName = value;
                         },
@@ -46,7 +52,7 @@ class ProductFormNonVegetarianSeller2View extends StatefulWidget {
                       QNumberField(
                         label: "Price",
                         validator: Validator.required,
-                        //   value: controller.price?.toString(),
+                        value: controller.price?.toString(),
                         onChanged: (value) {
                           controller.price = double.tryParse(value) ?? 0;
                         },
@@ -57,7 +63,7 @@ class ProductFormNonVegetarianSeller2View extends StatefulWidget {
                       QDropdownField(
                         label: "Category",
                         validator: Validator.required,
-                        //   value: controller.category,
+                        value: controller.category,
                         items: const [
                           {
                             "label": "Non Vegetarian",
@@ -74,7 +80,7 @@ class ProductFormNonVegetarianSeller2View extends StatefulWidget {
                       QMemoField(
                         label: "Description (Include contact person)",
                         validator: Validator.required,
-                        //   value: controller.description,
+                        value: controller.description,
                         onChanged: (value) {
                           controller.description = value;
                         },

@@ -1,8 +1,9 @@
 {
     "modules": [
-        "product_list_vegetarian_buyer2"
+        "product_detail_vegetarian_buyer2"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
-    "unfreezed": true
+    "unfreezed": true,
+    "use_cubit": false
 }
