@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../../all_product_list_buyer/view/product_list_buyer_page_view.dart';
-
 class HomePageBuyerView extends StatefulWidget {
   const HomePageBuyerView({Key? key}) : super(key: key);
 
@@ -103,7 +101,7 @@ class HomePageBuyerView extends StatefulWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      const ProductListVegetarianBuyerView(),
+                                      const ProductListVegetarianBuyer2View(),
                                 ),
                               );
                             },
@@ -131,7 +129,7 @@ class HomePageBuyerView extends StatefulWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      const ProductListNonVegetarianBuyerView(),
+                                      const ProductListNonVegetarianBuyer2View(),
                                 ),
                               );
                             },

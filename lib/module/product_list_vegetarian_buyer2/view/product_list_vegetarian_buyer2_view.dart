@@ -2,25 +2,28 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-class NonVegetarianPageView extends StatefulWidget {
-  const NonVegetarianPageView({Key? key}) : super(key: key);
+class ProductListVegetarianBuyer2View extends StatefulWidget {
+  const ProductListVegetarianBuyer2View({Key? key}) : super(key: key);
 
-  Widget build(context, NonVegetarianPageController controller) {
+  Widget build(context, ProductListVegetarianBuyer2Controller controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Non Vegetarian"),
+        title: const Text("Vegetarian"),
         actions: const [],
       ),
       body: Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
+            const SizedBox(
+              height: 20.0,
+            ),
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
-                    .collection("non_vegetarian")
+                    .collection("vegetarian")
                     .snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) return const Text("Error");
@@ -123,19 +126,14 @@ class NonVegetarianPageView extends StatefulWidget {
                   );
                 },
               ),
-            ),
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await Get.to(const ProductFormNonVegetarianSeller2View());
-        },
-        child: const Icon(Icons.add),
       ),
     );
   }
 
   @override
-  State<NonVegetarianPageView> createState() => NonVegetarianPageController();
+  State<ProductListVegetarianBuyer2View> createState() =>
+      ProductListVegetarianBuyer2Controller();
 }
