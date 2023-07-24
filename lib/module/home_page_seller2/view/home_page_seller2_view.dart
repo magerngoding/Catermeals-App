@@ -51,19 +51,17 @@ class HomePageSeller2View extends StatefulWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(
-              height: 12.0,
-            ),
-            CustomeButton(
-                title: 'All Product',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ProductListSeller(),
-                    ),
-                  );
-                }),
+
+            // CustomeButton(
+            //     title: 'All Product',
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) => const ProductListSeller(),
+            //         ),
+            //       );
+            //     }),
             const SizedBox(
               height: 20.0,
             ),

@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../controller/product_list_buyer_page_controller.dart';
-
 class ProductListBuyerPageView extends StatefulWidget {
   const ProductListBuyerPageView({Key? key}) : super(key: key);
 
@@ -63,7 +61,7 @@ class ProductListBuyerPageView extends StatefulWidget {
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
-                    .collection("products")
+                    .collection("vegetarian")
                     .snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) return const Text("Error");

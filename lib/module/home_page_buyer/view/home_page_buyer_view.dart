@@ -48,47 +48,56 @@ class HomePageBuyerView extends StatefulWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Categories',
-                              style: greenEmerlandTextStyle.copyWith(
-                                fontSize: 18,
-                                fontWeight: bold,
-                              ),
-                            ),
+                      Center(
+                        child: Text(
+                          'Categories',
+                          style: greenEmerlandTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: bold,
                           ),
-                          Row(
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const ProductListBuyerPageView(),
-                                    ),
-                                  );
-                                },
-                                child: Text(
-                                  'View all Product Here',
-                                  style: greenSageColorTextStyle.copyWith(
-                                    fontSize: 14,
-                                    fontWeight: semiBold,
-                                  ),
-                                ),
-                              ),
-                              Icon(
-                                Icons.navigate_next_outlined,
-                                color: greenSageColor,
-                              ),
-                            ],
-                          )
-                        ],
+                        ),
                       ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   children: [
+                      //     Align(
+                      //       alignment: Alignment.centerLeft,
+                      //       child: Text(
+                      //         'Categories',
+                      //         style: greenEmerlandTextStyle.copyWith(
+                      //           fontSize: 18,
+                      //           fontWeight: bold,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Row(
+                      //       children: [
+                      //         GestureDetector(
+                      //           onTap: () {
+                      //             Navigator.push(
+                      //               context,
+                      //               MaterialPageRoute(
+                      //                 builder: (context) =>
+                      //                     const ProductListBuyerPageView(),
+                      //               ),
+                      //             );
+                      //           },
+                      //           child: Text(
+                      //             'View all Product Here',
+                      //             style: greenSageColorTextStyle.copyWith(
+                      //               fontSize: 14,
+                      //               fontWeight: semiBold,
+                      //             ),
+                      //           ),
+                      //         ),
+                      //         Icon(
+                      //           Icons.navigate_next_outlined,
+                      //           color: greenSageColor,
+                      //         ),
+                      //       ],
+                      //     )
+                      //   ],
+                      // ),
                       const SizedBox(
                         height: 20,
                       ),
@@ -117,7 +126,7 @@ class HomePageBuyerView extends StatefulWidget {
                                   'Vegetarian',
                                   style: greenEmerlandTextStyle.copyWith(
                                     fontSize: 14,
-                                    fontWeight: regular,
+                                    fontWeight: semiBold,
                                   ),
                                 ),
                               ),
@@ -145,7 +154,7 @@ class HomePageBuyerView extends StatefulWidget {
                                   'Non Vegetarian',
                                   style: greenEmerlandTextStyle.copyWith(
                                     fontSize: 14,
-                                    fontWeight: regular,
+                                    fontWeight: semiBold,
                                   ),
                                 ),
                               ),
