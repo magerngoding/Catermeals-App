@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/rolebased/login.dart';
-import 'package:caterMeals/state_util.dart';
+import 'package:cater_meals/rolebased/login.dart';
+import 'package:cater_meals/state_util.dart';
 import '../view/profile_view.dart';
 
 class ProfileController extends State<ProfileView> implements MvcController {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caterMeals/state_util.dart';
+import 'package:cater_meals/state_util.dart';
 import '../view/main_navigation_view.dart';
 
 class MainNavigationController extends State<MainNavigationView>

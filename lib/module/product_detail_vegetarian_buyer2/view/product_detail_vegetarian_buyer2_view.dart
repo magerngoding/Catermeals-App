@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 import '../controller/product_detail_vegetarian_buyer2_controller.dart';
 

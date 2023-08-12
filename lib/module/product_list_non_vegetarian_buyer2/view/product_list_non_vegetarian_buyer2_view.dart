@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class ProductListNonVegetarianBuyer2View extends StatefulWidget {
   const ProductListNonVegetarianBuyer2View({Key? key}) : super(key: key);

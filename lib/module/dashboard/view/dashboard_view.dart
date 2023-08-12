@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);

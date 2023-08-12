@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -306,7 +306,7 @@ class _RegisterState extends State<Register> {
                               ),
                             ),
                             const Text(
-                              "CaterMeals",
+                              "cater_meals",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 30,

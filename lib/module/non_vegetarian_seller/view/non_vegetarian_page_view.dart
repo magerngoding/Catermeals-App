@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class NonVegetarianPageView extends StatefulWidget {
   const NonVegetarianPageView({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -210,7 +210,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             const Text(
-                              "CaterMeals",
+                              "cater_meals",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 30,
@@ -250,7 +250,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomePageBuyerView(),
+              builder: (context) => const MainNavigationView(),
             ),
           );
         }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class MainNavigationView extends StatefulWidget {
   const MainNavigationView({Key? key}) : super(key: key);

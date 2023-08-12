@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class ProductFormVegetarianSeller2Controller
     extends State<ProductFormVegetarianSeller2View> {

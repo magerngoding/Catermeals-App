@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/service/product_service.dart/product_service.dart';
-import 'package:caterMeals/state_util.dart';
+import 'package:cater_meals/service/product_service.dart/product_service.dart';
+import 'package:cater_meals/state_util.dart';
 import '../../../rolebased/login.dart';
 import '../view/product_list_seller.dart';
 

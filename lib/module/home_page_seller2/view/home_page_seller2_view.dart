@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class HomePageSeller2View extends StatefulWidget {
   const HomePageSeller2View({Key? key}) : super(key: key);

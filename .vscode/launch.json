@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "caterMeals",
+            "name": "cater_meals",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "caterMeals (profile mode)",
+            "name": "cater_meals (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "caterMeals (release mode)",
+            "name": "cater_meals (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

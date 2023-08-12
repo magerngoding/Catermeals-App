@@ -1,7 +1,7 @@
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 import 'package:flutter/material.dart';
-import 'package:caterMeals/state_util.dart';
+import 'package:cater_meals/state_util.dart';
 
 Future showInfoDialog(String message) async {
   await showDialog<void>(

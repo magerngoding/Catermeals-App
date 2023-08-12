@@ -2,7 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class VegetarianPageView extends StatefulWidget {
   const VegetarianPageView({

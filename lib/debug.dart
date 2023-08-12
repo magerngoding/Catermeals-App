@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caterMeals/state_util.dart';
+import 'package:cater_meals/state_util.dart';
 import 'core.dart';
 
 Widget debugView({

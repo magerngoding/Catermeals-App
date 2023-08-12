@@ -1,4 +1,4 @@
-import 'package:caterMeals/core.dart';
+import 'package:cater_meals/core.dart';
 
 class Format {}
 

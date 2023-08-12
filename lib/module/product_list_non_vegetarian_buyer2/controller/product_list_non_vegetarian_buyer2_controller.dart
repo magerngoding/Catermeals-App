@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caterMeals/state_util.dart';
+import 'package:cater_meals/state_util.dart';
 import '../view/product_list_non_vegetarian_buyer2_view.dart';
 
 class ProductListNonVegetarianBuyer2Controller
