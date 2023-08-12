@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hyper_ui">
+    package="com.example.caterMeals">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:label="hyper_ui"
+        android:label="caterMeals"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <receiver

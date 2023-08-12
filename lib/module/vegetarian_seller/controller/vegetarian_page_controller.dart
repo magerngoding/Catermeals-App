@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:caterMeals/core.dart';
 
 class VegetarianPageController extends State<VegetarianPageView>
     implements MvcController {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:caterMeals/core.dart';
 
 class HomePageBuyerView extends StatefulWidget {
   const HomePageBuyerView({Key? key}) : super(key: key);
@@ -57,47 +57,6 @@ class HomePageBuyerView extends StatefulWidget {
                           ),
                         ),
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //   children: [
-                      //     Align(
-                      //       alignment: Alignment.centerLeft,
-                      //       child: Text(
-                      //         'Categories',
-                      //         style: greenEmerlandTextStyle.copyWith(
-                      //           fontSize: 18,
-                      //           fontWeight: bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     Row(
-                      //       children: [
-                      //         GestureDetector(
-                      //           onTap: () {
-                      //             Navigator.push(
-                      //               context,
-                      //               MaterialPageRoute(
-                      //                 builder: (context) =>
-                      //                     const ProductListBuyerPageView(),
-                      //               ),
-                      //             );
-                      //           },
-                      //           child: Text(
-                      //             'View all Product Here',
-                      //             style: greenSageColorTextStyle.copyWith(
-                      //               fontSize: 14,
-                      //               fontWeight: semiBold,
-                      //             ),
-                      //           ),
-                      //         ),
-                      //         Icon(
-                      //           Icons.navigate_next_outlined,
-                      //           color: greenSageColor,
-                      //         ),
-                      //       ],
-                      //     )
-                      //   ],
-                      // ),
                       const SizedBox(
                         height: 20,
                       ),

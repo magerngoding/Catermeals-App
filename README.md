@@ -6,7 +6,7 @@ Tutorial membuat Project Baru dengan Hyper UI:
 ```
 mkdir demo
 cd demo
-git clone https://github.com/denyocrworld/hyper_ui .
+git clone https://github.com/denyocrworld/caterMeals .
 flutter clean
 flutter pub get --verbose
 code .
@@ -14,7 +14,7 @@ code .
 
 atau jalankan satu perintah ini:
 ```
-mkdir demo && cd demo && git clone https://github.com/denyocrworld/hyper_ui . &&  flutter clean && flutter pub get --verbose && code .
+mkdir demo && cd demo && git clone https://github.com/denyocrworld/caterMeals . &&  flutter clean && flutter pub get --verbose && code .
 ```
 
 Documentation (Web)<br>

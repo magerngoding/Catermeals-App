@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:caterMeals/core.dart';
 
 class NonVegetarianPageView extends StatefulWidget {
   const NonVegetarianPageView({Key? key}) : super(key: key);
@@ -40,9 +40,11 @@ class NonVegetarianPageView extends StatefulWidget {
 
                       return GestureDetector(
                         onTap: () {
-                          Get.to(ProductFormNonVegetarianSeller2View(
-                            item: item,
-                          ));
+                          Get.to(
+                            ProductFormNonVegetarianSeller2View(
+                              item: item,
+                            ),
+                          );
                         },
                         child: ItemDismissible(
                           onConfirm: () => controller.doDelete(item['id']),

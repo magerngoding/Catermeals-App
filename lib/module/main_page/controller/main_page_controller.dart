@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
+import 'package:caterMeals/state_util.dart';
 import '../view/main_page_view.dart';
 
 class MainPageController extends State<MainPageView> implements MvcController {

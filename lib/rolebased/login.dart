@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:caterMeals/core.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -250,7 +250,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const MainNavigationView(),
+              builder: (context) => const HomePageBuyerView(),
             ),
           );
         }

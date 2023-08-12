@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/service/product_non_vegetarian_service/product_non_vegetarian_service.dart';
-import 'package:hyper_ui/state_util.dart';
+import 'package:caterMeals/service/product_non_vegetarian_service/product_non_vegetarian_service.dart';
+import 'package:caterMeals/state_util.dart';
 import '../view/non_vegetarian_page_view.dart';
 
 class NonVegetarianPageController extends State<NonVegetarianPageView>

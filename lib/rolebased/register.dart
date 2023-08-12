@@ -2,8 +2,7 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
-import 'login.dart';
+import 'package:caterMeals/core.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -158,14 +157,17 @@ class _RegisterState extends State<Register> {
                           controller: confirmpassController,
                           decoration: InputDecoration(
                             suffixIcon: IconButton(
-                                icon: Icon(_isObscure2
-                                    ? Icons.visibility_off
-                                    : Icons.visibility),
-                                onPressed: () {
-                                  setState(() {
+                              icon: Icon(_isObscure2
+                                  ? Icons.visibility_off
+                                  : Icons.visibility),
+                              onPressed: () {
+                                setState(
+                                  () {
                                     _isObscure2 = !_isObscure2;
-                                  });
-                                }),
+                                  },
+                                );
+                              },
+                            ),
                             filled: true,
                             fillColor: Colors.white,
                             hintText: 'Confirm Password',
@@ -211,19 +213,21 @@ class _RegisterState extends State<Register> {
                               isExpanded: false,
                               iconEnabledColor: const Color(0xff206A5D),
                               focusColor: const Color(0xff206A5D),
-                              items: options.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(
-                                    dropDownStringItem,
-                                    style: const TextStyle(
-                                      color: Color(0xff206A5D),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                              items: options.map(
+                                (String dropDownStringItem) {
+                                  return DropdownMenuItem<String>(
+                                    value: dropDownStringItem,
+                                    child: Text(
+                                      dropDownStringItem,
+                                      style: const TextStyle(
+                                        color: Color(0xff206A5D),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                );
-                              }).toList(),
+                                  );
+                                },
+                              ).toList(),
                               onChanged: (newValueSelected) {
                                 setState(() {
                                   _currentItemSelected = newValueSelected!;
@@ -337,8 +341,14 @@ class _RegisterState extends State<Register> {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     var user = _auth.currentUser;
     CollectionReference ref = FirebaseFirestore.instance.collection('users');
-    ref.doc(user!.uid).set({'email': emailController.text, 'rool': rool});
+    ref.doc(user!.uid).set(
+      {'email': emailController.text, 'rool': rool},
+    );
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const LoginPage()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => const LoginPage(),
+      ),
+    );
   }
 }
