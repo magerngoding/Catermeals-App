@@ -11,8 +11,6 @@ export 'package:cater_meals/module/all_product_list_buyer/controller/product_lis
 export 'package:cater_meals/module/all_product_list_buyer/view/product_list_buyer_page_view.dart';
 export 'package:cater_meals/module/all_product_list_seller/controller/product_list_page_controller.dart';
 export 'package:cater_meals/module/all_product_list_seller/view/product_list_seller.dart';
-export 'package:cater_meals/module/dashboard/controller/dashboard_controller.dart';
-export 'package:cater_meals/module/dashboard/view/dashboard_view.dart';
 export 'package:cater_meals/module/home_page_buyer/controller/home_page_buyer_controller.dart';
 export 'package:cater_meals/module/home_page_buyer/view/home_page_buyer_view.dart';
 export 'package:cater_meals/module/home_page_seller2/controller/home_page_seller2_controller.dart';

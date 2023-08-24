@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
       valueListenable: Get.mainTheme,
       builder: (context, value, child) {
         return MaterialApp(
-          title: '',
+          title: 'Catermeals',
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
